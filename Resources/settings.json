@@ -1,0 +1,11 @@
+{
+    "hue-url": "null",
+    
+    "presets": [
+        { "name": "2700º", "display": 2700, "hue": 2000 },
+        { "name": "3500º", "display": 3500, "hue": 2400 },
+        { "name": "4500º", "display": 4500, "hue": 2700 },
+        { "name": "5500º", "display": 5500, "hue": 3350 },
+        { "name": "6500º", "display": null, "hue": 4000 }
+    ]
+}
