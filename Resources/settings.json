@@ -2,10 +2,11 @@
     "hue-url": "null",
     
     "presets": [
-        { "name": "2700º", "display": 2700, "hue": 2000 },
-        { "name": "3500º", "display": 3500, "hue": 2400 },
-        { "name": "4500º", "display": 4500, "hue": 2700 },
-        { "name": "5500º", "display": 5500, "hue": 3350 },
-        { "name": "6500º", "display": null, "hue": 4000 }
+        { "name": "2000º", "xy": [ 0.5268, 0.4133 ], "cct": 2700, "hue": 2000 },
+        { "name": "2700º", "xy": null,               "cct": 2700, "hue": 2400 },
+        { "name": "3500º", "xy": null,               "cct": 3500, "hue": 2700 },
+        { "name": "4500º", "xy": null,               "cct": 4500, "hue": 2850 },
+        { "name": "5500º", "xy": null,               "cct": 5500, "hue": 3600 },
+        { "name": "6500º", "xy": null,               "cct": null, "hue": 4500 }
     ]
 }

@@ -29,14 +29,24 @@
 - (instancetype) initWithDictionary:(NSDictionary *)dictionary
 {
     if ((self = [super init])) {
-        id displayNumber    = [dictionary objectForKey:@"display"];
-        id hueNumber        = [dictionary objectForKey:@"hue"];
+        id XYArray   = [dictionary objectForKey:@"xy"];
+        id CCTNumber = [dictionary objectForKey:@"cct"];
+        id hueNumber = [dictionary objectForKey:@"hue"];
         
         _name = [dictionary objectForKey:@"name"];
 
-        if ([displayNumber isKindOfClass:[NSNumber class]]) {
-            _usesDisplayWhitePoint = YES;
-            _displayWhitePoint = [displayNumber doubleValue];
+        if ([XYArray isKindOfClass:[NSArray class]]) {
+            _usesXYWhitePoint = YES;
+            
+            _XYWhitePoint = CGPointMake(
+                [[XYArray firstObject] doubleValue],
+                [[XYArray lastObject]  doubleValue]
+            );
+        }
+
+        if ([CCTNumber isKindOfClass:[NSNumber class]]) {
+            _usesCCTWhitePoint = YES;
+            _CCTWhitePoint = [CCTNumber doubleValue];
         }
 
         if ([hueNumber isKindOfClass:[NSNumber class]]) {

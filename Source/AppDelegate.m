@@ -23,7 +23,7 @@
 
 #import "AppDelegate.h"
 #import "HueManager.h"
-#import "CoreBrightnessSPI.h"
+#import "AppleSPI.h"
 #import "Preset.h"
 
 @interface AppDelegate ()
@@ -181,7 +181,7 @@ NSString *sGetApplicationSupportDirectory()
     double maxDistance = INFINITY;
     Preset *closetPreset;
     for (Preset *preset in _presets) {
-        double distance = fabs([preset displayWhitePoint] - temperature);
+        double distance = fabs([preset CCTWhitePoint] - temperature);
 
         if (distance < maxDistance) {
             maxDistance = distance;
@@ -201,11 +201,16 @@ NSString *sGetApplicationSupportDirectory()
         [_hueManager updateWhitePoint:[preset hueWhitePoint]];
     }
 
-    if ([preset usesDisplayWhitePoint]) {
-        [_blueLightClient setCCT:[preset displayWhitePoint] commit:YES];
+    if ([preset usesCCTWhitePoint]) {
+        [_blueLightClient setCCT:[preset CCTWhitePoint] commit:YES];
         [_blueLightClient setEnabled:YES];
     } else {
         [_blueLightClient setEnabled:NO];
+    }
+    
+    if ([preset usesXYWhitePoint]) {
+        CGPoint whitePoint = [preset XYWhitePoint];
+        CoreDisplay_SetWhitePointWithDuration(whitePoint.x, whitePoint.y, 0.5);
     }
     
     NSString *name = [preset name];
@@ -236,6 +241,10 @@ NSString *sGetApplicationSupportDirectory()
     if (index >= 0 && index < [_presets count]) {
         Preset *preset = [_presets objectAtIndex:index];
         [self _updateWithPreset:preset];
+
+        [[self slider] setIntegerValue:[_presets indexOfObject:preset]];
+
+    
     }
 }
 

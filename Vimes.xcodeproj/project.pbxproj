@@ -15,6 +15,7 @@
 		556DC06B2079EA520076AE7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556DC0672079EA520076AE7B /* Assets.xcassets */; };
 		556DC06E2079EA520076AE7B /* settings.json in Resources */ = {isa = PBXBuildFile; fileRef = 556DC06A2079EA520076AE7B /* settings.json */; };
 		556DC0702079EA710076AE7B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556DC06F2079EA710076AE7B /* MainMenu.xib */; };
+		556DC072207B0CEB0076AE7B /* CoreDisplay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556DC071207B0CEB0076AE7B /* CoreDisplay.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +23,7 @@
 		556DC0362078E3860076AE7B /* CoreBrightness */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = CoreBrightness; path = ../../../../System/Library/PrivateFrameworks/CoreBrightness.framework/Versions/A/CoreBrightness; sourceTree = "<group>"; };
 		556DC05B2079EA460076AE7B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Source/AppDelegate.h; sourceTree = "<group>"; };
 		556DC05C2079EA460076AE7B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Source/AppDelegate.m; sourceTree = "<group>"; };
-		556DC05D2079EA460076AE7B /* CoreBrightnessSPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreBrightnessSPI.h; path = Source/CoreBrightnessSPI.h; sourceTree = "<group>"; };
+		556DC05D2079EA460076AE7B /* AppleSPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppleSPI.h; path = Source/AppleSPI.h; sourceTree = "<group>"; };
 		556DC05E2079EA460076AE7B /* HueManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HueManager.h; path = Source/HueManager.h; sourceTree = "<group>"; };
 		556DC05F2079EA460076AE7B /* HueManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HueManager.m; path = Source/HueManager.m; sourceTree = "<group>"; };
 		556DC0602079EA460076AE7B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/main.m; sourceTree = "<group>"; };
@@ -32,6 +33,7 @@
 		556DC0692079EA520076AE7B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		556DC06A2079EA520076AE7B /* settings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = settings.json; path = Resources/settings.json; sourceTree = "<group>"; };
 		556DC06F2079EA710076AE7B /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = Resources/MainMenu.xib; sourceTree = "<group>"; };
+		556DC071207B0CEB0076AE7B /* CoreDisplay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreDisplay.framework; path = ../../../../System/Library/Frameworks/CoreDisplay.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				556DC072207B0CEB0076AE7B /* CoreDisplay.framework in Frameworks */,
 				556DC0372078E3860076AE7B /* CoreBrightness in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,7 +70,7 @@
 		556DC01F2078BFDE0076AE7B /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				556DC05D2079EA460076AE7B /* CoreBrightnessSPI.h */,
+				556DC05D2079EA460076AE7B /* AppleSPI.h */,
 				556DC0612079EA460076AE7B /* Preset.h */,
 				556DC0622079EA460076AE7B /* Preset.m */,
 				556DC05B2079EA460076AE7B /* AppDelegate.h */,
@@ -82,6 +85,7 @@
 		556DC0352078E3860076AE7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				556DC071207B0CEB0076AE7B /* CoreDisplay.framework */,
 				556DC0362078E3860076AE7B /* CoreBrightness */,
 			);
 			name = Frameworks;

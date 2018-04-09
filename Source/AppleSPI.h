@@ -1,3 +1,10 @@
+
+
+extern void CoreDisplay_SetWhitePoint(double, double);
+extern void CoreDisplay_SetWhitePointWithDuration(double, double, double);
+extern void CoreDisplay_GetCurrentWhitepoint(double *, double *);
+
+
 @interface CBBlueLightClient : NSObject
 
 + (BOOL)supportsBlueLightReduction; 
@@ -11,3 +18,4 @@
 - (BOOL) setActive:(BOOL)yn;
 
 @end
+

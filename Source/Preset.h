@@ -29,8 +29,11 @@
 
 @property (nonatomic, readonly) NSString *name;
 
-@property (nonatomic, readonly) BOOL usesDisplayWhitePoint;
-@property (nonatomic, readonly) double displayWhitePoint;
+@property (nonatomic, readonly) BOOL usesXYWhitePoint;
+@property (nonatomic, readonly) CGPoint XYWhitePoint;
+
+@property (nonatomic, readonly) BOOL usesCCTWhitePoint;
+@property (nonatomic, readonly) double CCTWhitePoint;
 
 @property (nonatomic, readonly) BOOL usesHueWhitePoint;
 @property (nonatomic, readonly) double hueWhitePoint;

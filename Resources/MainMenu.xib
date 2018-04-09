@@ -16,7 +16,6 @@
             <connections>
                 <outlet property="nameLabel" destination="3Mt-AN-4Dw" id="qI1-MT-035"/>
                 <outlet property="reloadMenuItem" destination="gX3-ch-vG4" id="68g-Q9-st1"/>
-                <outlet property="reloadlMenuItem" destination="gX3-ch-vG4" id="37d-gt-pTN"/>
                 <outlet property="revealMenuItem" destination="cW7-Q5-fGG" id="MId-2w-Esh"/>
                 <outlet property="revealSeparator" destination="HcR-m0-J8x" id="IFR-WI-oJB"/>
                 <outlet property="slider" destination="RQA-St-s63" id="gW3-Kd-Apb"/>
